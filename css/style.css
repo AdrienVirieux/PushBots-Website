@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url("../image/wallpaper-pushbots.jpeg");
+    background-size: 100% ;
+
+    text-align: center;
+}
+
+
+main {
+    width: 100%;
+}
+.info-box {
+    width: 70%;
+    height: 50px;
+
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+}
