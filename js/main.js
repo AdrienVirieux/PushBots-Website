@@ -1,40 +1,22 @@
-document.addEventListener('DOMContentLoaded', init, false);
-function init(){
 
-    var funcPath = document.getElementById("notif-button").getAttribute("onclick");
+// Source : https://stackoverflow.com/questions/18229022/how-to-show-current-time-in-javascript-in-the-format-hhmmss
+function checkTime(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
 
-    // Change
-    function function1() {
-        funcPath = "sendNotification1()";
-        document.getElementById("notif-button").setAttribute("onclick", funcPath);
-    }
-    var button1 = document.getElementById('but1');
-    button1.addEventListener('click', function1, true);
+function getTime() {
+    var d = new Date();
 
-    // Change
-    function function2() {
-        funcPath = "sendNotification2()";
-        document.getElementById("notif-button").setAttribute("onclick", funcPath);
-    }
-    var button2 = document.getElementById('but2');
-    button2.addEventListener('click', function2, true);
+    var hours = d.getHours();
+    var minutes = d.getMinutes();
+    var seconds = d.getSeconds();
+    // add a zero in front of numbers<10
+    minutes = checkTime(minutes);
+    seconds = checkTime(seconds);
+    document.getElementById("time").textContent = hours + ":" + minutes + ":" + seconds;
+}
 
-    // Change
-    function function3() {
-        funcPath = "sendNotification3()";
-        document.getElementById("notif-button").setAttribute("onclick", funcPath);
-    }
-    var button3 = document.getElementById('but3');
-    button3.addEventListener('click', function3, true);
-
-    // Change
-    function function4() {
-        funcPath = "sendNotification4()";
-        document.getElementById("notif-button").setAttribute("onclick", funcPath);
-    }
-    var button4 = document.getElementById('but4');
-    button4.addEventListener('click', function4, true);
-
-};
-
-window.onload = init;
+setInterval(getTime,1000);

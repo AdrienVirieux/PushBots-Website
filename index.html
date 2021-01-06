@@ -4,71 +4,21 @@
         <meta charset="utf-8">
         <title>Utilisation de PushBots</title>
         <link rel="stylesheet" href="css/style.css">
+
         <script src="js/main.js" type="text/javascript"></script>
-        
         <!-- Script PushBots -->
-        <script>
-        //some default pre init
-        var PB = PB || {};PB.q = PB.q || [];PB.events = PB.events || [];
-
-        //PushBots ApplicationId (required)
-        PB.app_id = "5ff5117420d67541b6347c25";
-        //Your domain name, must be HTTPS or localhost  (required)
-        PB.domain = "https://hungry-johnson-311663.netlify.app";
-        //Update and uncomment it if you are using custom safari certificate for your app
-        PB.safari_push_id = "web.com.pushbots.safaripush";
-        //****************************************
-
-        PB.logging_enabled = true;
-        PB.auto_subscribe = true;
-
-        //Custom worker and manifest URL
-        //PB.worker_url = PB.domain + "/pushbots-worker.js";
-
-        //Welcome notification message
-        PB.welcome = {title:"Welcome ",message:"Thanks for subscribing!", url :PB.domain};
-
-        function sendNotification(){
-              PB.register();
-              PB.q.push(["sendNotification", {title:"Hey ",message:"Why not the first?", url :"https://hungry-johnson-311663.netlify.app"}]);
-        }
-             function sendNotification1(){
-              PB.register();
-              PB.q.push(["sendNotification", {title:"Hey ",message:"Why not?", url :"https://hungry-johnson-311663.netlify.app"}]);
-        }
-        function sendNotification2(){
-              PB.register();
-              PB.q.push(["sendNotification", {title:"Boy ",message:"Why not 2.0?", url :"https://hungry-johnson-311663.netlify.app"}]);
-        }
-        function sendNotification3(){
-              PB.register();
-              PB.q.push(["sendNotification", {title:"Boi ",message:"Why not? 3.0", url :"https://hungry-johnson-311663.netlify.app"}]);
-        }
-        function sendNotification4(){
-              PB.register();
-              PB.q.push(["sendNotification", {title:"Boa ",message:"Why not? 4.0", url :"https://hungry-johnson-311663.netlify.app"}]);
-        }
-        </script>
-
+        <script src="js/pushbots.js"></script>
         <script src="//cdn.pushbots.com/js/sdk.min.js" type="text/javascript" onload="PB.init()" async></script>
-
     </head>
     <body>
         <!-- Juste de l'esthétisme -->
         <div>
-            <h1>PUSHBOTS</h1>
-            <img src="image/pushbots-logo.png" alt="">
+            <span id="time"></span>
         </div>
 
         <!-- La partie interressante -->
-        <a id="notif-button" href="#" onclick="sendNotification()">Super boutton</a>
         <main>
-            <ul>
-                <li><a id="but1" href="#">style 1</a></li>
-                <li><a id="but2" href="#">style 2</a></li>
-                <li><a id="but3" href="#">style 3</a></li>
-                <li><a id="but4" href="#">style 4</a></li>
-            </ul>
+            
         </main>
     </body>
 </html>
