@@ -18,7 +18,7 @@ PB.auto_subscribe = true;
 //Welcome notification message
 PB.welcome = {title:"Welcome ",message:"Thanks for subscribing!", url :PB.domain};
 
-function sendNotification(){
+function sendNotification(desc){
       PB.register();
-      PB.q.push(["sendNotification", {title:"Hey ",message:"Why not?", url :"https://hungry-johnson-311663.netlify.app"}]);
+      PB.q.push(["sendNotification", {title:"Reminder ",message:desc, url :"https://hungry-johnson-311663.netlify.app"}]);
 }
