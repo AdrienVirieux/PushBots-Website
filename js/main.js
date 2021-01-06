@@ -51,10 +51,12 @@ function guidGenerator() {
     return (S4()+S4());
 }
 
+
+// cookie
 var TabId = [];
 var TabTime = [];
 var TabDesc = [];
-// cookie
+
 function cookieDoe(id, time, desc) {
     TabId.push(id);
     TabTime.push(time);
@@ -62,8 +64,11 @@ function cookieDoe(id, time, desc) {
 }
 
 
-
-
+function removeParent(i) {
+    var dummy = document.getElementById(TabId[i]).parentNode.parentNode;
+    dummy.removeChild(document.getElementById(TabId[i]).parentNode);
+}
+// Check le time
 function check() {
     var d = new Date();
 
@@ -75,7 +80,14 @@ function check() {
     for (var i = 0; i < TabTime.length; ++i) {
         if (TabTime[i] == time) {
             sendNotification(TabDesc[i]);
-        } 
+
+            var dummy = document.getElementById("notif-box");
+            dummy.removeChild(document.getElementById(TabId[i]).parentNode);
+
+            TabTime.splice(i, 1);
+            TabDesc.splice(i, 1);
+            TabId.splice(i, 1);
+        }
     }
 }
 setInterval(check,500);
