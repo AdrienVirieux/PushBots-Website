@@ -27,9 +27,21 @@
         //Welcome notification message
         PB.welcome = {title:"Welcome ",message:"Thanks for subscribing!", url :PB.domain};
 
-        function sendNotification(){
+        function sendNotification1(){
               PB.register();
               PB.q.push(["sendNotification", {title:"Hey ",message:"Why not?", url :"https://hungry-johnson-311663.netlify.app"}]);
+        }
+        function sendNotification2(){
+              PB.register();
+              PB.q.push(["sendNotification", {title:"Boy ",message:"Why not 2.0?", url :"https://hungry-johnson-311663.netlify.app"}]);
+        }
+        function sendNotification3(){
+              PB.register();
+              PB.q.push(["sendNotification", {title:"Boi ",message:"Why not? 3.0", url :"https://hungry-johnson-311663.netlify.app"}]);
+        }
+        function sendNotification4(){
+              PB.register();
+              PB.q.push(["sendNotification", {title:"Boa ",message:"Why not? 4.0", url :"https://hungry-johnson-311663.netlify.app"}]);
         }
 
         </script>
@@ -46,7 +58,7 @@
 
         <!-- La partie interressante -->
         <main>
-            <a href="#" onclick="sendNotification()">Super boutton</a>
+            <a href="#" onclick="sendNotification1()">Super boutton</a>
             <div class="info-box">
                 <p>nike</p>
             </div>
