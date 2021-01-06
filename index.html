@@ -27,21 +27,25 @@
         //Welcome notification message
         PB.welcome = {title:"Welcome ",message:"Thanks for subscribing!", url :PB.domain};
 
+        function sendNotification(){
+              PB.register();
+              PB.q.push(["sendNotification", {title:"Hey ",message:"Why not the first?", url :"https://hungry-johnson-311663.netlify.app"}]);
+        }
         function sendNotification1(){
               PB.register();
-              PB.q.push(["sendNotification", {title:"Hey ",message:"Why not?", url :"https://hungry-johnson-311663.netlify.app"}]);
+              PB.q.push(["sendNotification1", {title:"Hey ",message:"Why not?", url :"https://hungry-johnson-311663.netlify.app"}]);
         }
         function sendNotification2(){
               PB.register();
-              PB.q.push(["sendNotification", {title:"Boy ",message:"Why not 2.0?", url :"https://hungry-johnson-311663.netlify.app"}]);
+              PB.q.push(["sendNotification2", {title:"Boy ",message:"Why not 2.0?", url :"https://hungry-johnson-311663.netlify.app"}]);
         }
         function sendNotification3(){
               PB.register();
-              PB.q.push(["sendNotification", {title:"Boi ",message:"Why not? 3.0", url :"https://hungry-johnson-311663.netlify.app"}]);
+              PB.q.push(["sendNotification3", {title:"Boi ",message:"Why not? 3.0", url :"https://hungry-johnson-311663.netlify.app"}]);
         }
         function sendNotification4(){
               PB.register();
-              PB.q.push(["sendNotification", {title:"Boa ",message:"Why not? 4.0", url :"https://hungry-johnson-311663.netlify.app"}]);
+              PB.q.push(["sendNotification4", {title:"Boa ",message:"Why not? 4.0", url :"https://hungry-johnson-311663.netlify.app"}]);
         }
 
         </script>
@@ -57,7 +61,7 @@
         </div>
 
         <!-- La partie interressante -->
-        <a id="notif-button" href="#" oncklick="sendNotification1()">Super boutton</a>
+        <a id="notif-button" href="#" oncklick="sendNotification()">Super boutton</a>
         <main>
             <ul>
                 <li><a id="but1" href="#">style 1</a></li>
