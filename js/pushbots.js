@@ -2,7 +2,7 @@
 var PB = PB || {};PB.q = PB.q || [];PB.events = PB.events || [];
 
 //PushBots ApplicationId (required)
-PB.app_id = "5ff64878a23a47362956ef33";
+PB.app_id = "5ff64e737fa86a0cb26e76d7";
 //Your domain name, must be HTTPS or localhost  (required)
 PB.domain = "https://hungry-johnson-311663.netlify.app";
 //Update and uncomment it if you are using custom safari certificate for your app
