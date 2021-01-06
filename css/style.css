@@ -1,3 +1,4 @@
+
 body {
     display: flex;
     flex-direction: column;
@@ -7,16 +8,46 @@ body {
     background-size: 100% ;
 
     text-align: center;
+    text-decoration: none;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+a {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
 }
 
+
+h1 {
+    font-size: 8em;
+    color: rgb(241, 241, 241);
+
+    margin-bottom: 0;
+}
 
 main {
     width: 100%;
 }
-.info-box {
-    width: 70%;
-    height: 50px;
+
+#notif-button {
+    background-color: rgb(168, 182, 189);
+
+    color: black;
+
+    font-size: 1.5em;
+    padding: 20px 80px;
+}
+
+
+main {
+    width: auto;
+    height: auto;
 
     margin: auto;
     background-color: rgb(255, 255, 255);
+}
+main li {display: inline-block;}
+main a {
+    background-color: rgb(178, 242, 227);
+    padding: 20px 50px;
 }
