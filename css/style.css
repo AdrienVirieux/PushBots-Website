@@ -125,6 +125,7 @@ main div {margin: 20px;}
 
     background-image: url("../image/trash.png");
     background-size: 40px;
+    z-index: 2;
 }
 .trash:hover, .trash:active {background-image: url("../image/trash-active.png");}
 
