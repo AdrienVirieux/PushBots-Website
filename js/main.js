@@ -112,16 +112,15 @@ function showDesc(id) {
 // Delete the notification
 function deleteNotif(id) {
     var elem = document.getElementById(id);
-    elem.parentNode.parentNode.parentNode.removeChild(elem.parentNode.parentNode);
-
-    var elem = elem.parentNode.children[0].children[2].id;
+    var idNotif = elem.parentNode.children[0].children[2].id;
     for (var i = 0; i < TabId.length; ++i) {
-        if (TabId[i] == elem) {
+        if (TabId[i] == idNotif) {
             TabTime.splice(i, 1);
             TabDesc.splice(i, 1);
             TabId.splice(i, 1);
         }
     }
+    elem.parentNode.parentNode.parentNode.removeChild(elem.parentNode.parentNode);
 }
 
 
