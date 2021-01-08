@@ -99,7 +99,7 @@ function createNotif() {
 
 //
 function showDesc(id) {
-    var elem = document.getElementById(id).children[1];
+    var elem = document.getElementById(id).parentNode.parentNode.children[1];
     if (elem.value == "show") {
         elem.style.display = "none";
         elem.value = "hide";
@@ -111,14 +111,14 @@ function showDesc(id) {
 
 // Delete the notification
 function deleteNotif(id) {
-    var elem = document.getElementById(id);
-    var idNotif = elem.parentNode.children[0].children[2].id;
-    elem.parentNode.parentNode.parentNode.removeChild(elem.parentNode.parentNode);
+    document.getElementById(id).parentNode.parentNode.parentNode.removeChild(document.getElementById(id).parentNode.parentNode);
+    var elem = document.getElementById(id).parentNode.children[0].children[2].id;
     for (var i = 0; i < TabId.length; ++i) {
-        if (TabId[i] == idNotif) {
+        if (TabId[i] == elem) {
             TabTime.splice(i, 1);
             TabDesc.splice(i, 1);
             TabId.splice(i, 1);
+            break;
         }
     }
 }
