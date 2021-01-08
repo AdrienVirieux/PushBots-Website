@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Utilisation de PushBots</title>
+        <title>Reminder generator</title>
         <link rel="stylesheet" href="css/style.css">
 
         <script src="js/main.js"></script>
@@ -12,35 +12,55 @@
     </head>
     <body>
         <!-- Juste de l'esthétisme -->
-        <div class="truc">
+        <div class="live-time">
             <span id="date"></span>
             <span id="time"></span>
         </div>
 
         <!-- La partie interressante -->
         <main>
+
+            <!-- Paramètres de la notification-->
             <div class="genere-notif">
+                <h2>Reminder generator</h2>
                 <div>
-                    <input type="number" id="Ehours" min="0" max="23" value="0">
-                    <label for="Ehours">hours</label>
-                    <input type="number" id="Eminutes" min="0" max="59" value="0">
-                    <label for="Eminutes">minutes</label>
-                    <input type="number" id="Eseconds" min="0" max="59" value="0">
-                    <label for="Eseconds">seconds</label>
+                    <!-- Hours input -->
+                    <input type="number" id="valueHours" min="0" max="23">
+                    <label for="valueHours">hours</label>
+                    <span> : </span>
+                    <!-- Minutes input -->
+                    <input type="number" id="valueMinutes" min="0" max="59">
+                    <label for="valueMinutes">minutes</label>
+                    <span> : </span>
+                    <!-- Seconds input -->
+                    <input type="number" id="valueSeconds" min="0" max="59" value="0">
+                    <label for="valueSeconds">seconds</label>
                 </div>
-                <textarea id="Edesc" rows="8" cols="80"></textarea>
-                <a onclick="showContent()" href="#">generate</a>
+                <textarea id="valueDesc" placeholder="Description de votre notification"></textarea>
+
+                <a id="genereButton" onclick="createNotif()">generate</a>
             </div>
 
+            <!-- Réserve des notifications créées-->
             <div id="notif-box">
-                <template id="notif">
-                    <div>
-                        <span>reminder</span>
-                        <span id="notif-time"></span>
+                <!-- Forme d'une notif -->
+                <template>
+                    <div class="notif" id="notif" onclick="showDesc(this.id)">
+                        <div>
+                            <div>
+                                <span>reminder at</span>
+                                <span id="templateSpan"></span>
+                            </div>
+                            <div id="delete" class="trash" onclick="deleteNotif(this.id)"></div>
+                        </div>
+                        <span class="desc-notif"></span>
                     </div>
                 </template>
+
             </div>
+
         </main>
+        <!-- Fin de la partie interressante -->
 
     </body>
 </html>
