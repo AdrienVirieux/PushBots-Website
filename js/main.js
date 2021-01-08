@@ -99,7 +99,7 @@ function createNotif() {
 
 //
 function showDesc(id) {
-    var elem = document.getElementById(id).parentNode.parentNode.children[1];
+    var elem = document.getElementById(id).parentNode.children[1];
     if (elem.value == "show") {
         elem.style.display = "none";
         elem.value = "hide";
