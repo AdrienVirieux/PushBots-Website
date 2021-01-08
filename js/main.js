@@ -83,7 +83,7 @@ function createNotif() {
     document.getElementsByClassName("desc-notif")[TabDesc.length].textContent = desc;
 
     // Get value
-    cookie(newId, timeNotif, document.getElementById("valueDesc").value);
+    cookie(newId, timeNotif, desc);
 
     // Add more unique ID
     var newId = idGenerator();
