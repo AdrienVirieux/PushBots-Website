@@ -113,6 +113,7 @@ function showDesc(id) {
 function deleteNotif(id) {
     var elem = document.getElementById(id);
     var idNotif = elem.parentNode.children[0].children[2].id;
+    elem.parentNode.parentNode.parentNode.removeChild(elem.parentNode.parentNode);
     for (var i = 0; i < TabId.length; ++i) {
         if (TabId[i] == idNotif) {
             TabTime.splice(i, 1);
@@ -120,7 +121,6 @@ function deleteNotif(id) {
             TabId.splice(i, 1);
         }
     }
-    elem.parentNode.parentNode.parentNode.removeChild(elem.parentNode.parentNode);
 }
 
 
