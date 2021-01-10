@@ -83,7 +83,7 @@ main div {margin: 20px;}
 
 /*  ---------------------------- */
 
-/**/
+/* Properties de la boîtes des notifs */
 #notif-box {
     width: 500px;
     overflow-y: scroll;
@@ -116,7 +116,7 @@ main div {margin: 20px;}
     flex-direction: column;
 }
 
-/*  */
+/* Properties du button delete */
 .trash {
     width: 40px;
     height: 40px;
@@ -125,11 +125,10 @@ main div {margin: 20px;}
 
     background-image: url("../image/trash.png");
     background-size: 40px;
-    z-index: 2;
 }
 .trash:hover, .trash:active {background-image: url("../image/trash-active.png");}
 
-/*  */
+/* Properties de la boite de description */
 .desc-notif {
     background-color: rgb(235, 235, 235);
     margin-top: 5px;
