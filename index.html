@@ -45,13 +45,13 @@
             <div id="notif-box">
                 <!-- Forme d'une notif -->
                 <template>
-                    <div class="notif" id="notif" onclick="showDesc(this.id)">
+                    <div class="notif" id="notif" onclick="showDesc(this)">
                         <div>
-                            <div>
+                            <div >
                                 <span>reminder at</span>
                                 <span id="templateSpan"></span>
                             </div>
-                            <div id="delete" class="trash" onclick="deleteNotif(this.id)"></div>
+                            <div id="delete" class="trash" onclick="deleteNotif(this)"></div>
                         </div>
                         <span class="desc-notif"></span>
                     </div>
